@@ -29,6 +29,10 @@
         </activity>
 
         <activity
+            android:name=".activities.OnboardingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait" />
 

@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">SymbolSets(FV)</string>
-    <string name="ChooseYourCup">Choose your Cup</string>
+    <string name="app_name">Return A Cup</string>
+
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
 
     <string name="PlaceYourSymbol">Place your symbol within red rectangle.</string>
     <string name="Scanning">Scanning…</string>
