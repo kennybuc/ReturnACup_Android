@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SymbolSets(FV)</string>
+    <string name="ChooseYourCup">Choose your Cup</string>
+
+    <string name="PlaceYourSymbol">Place your symbol within red rectangle.</string>
+    <string name="Scanning">Scanning…</string>
+    <string name="Submit">Submit</string>
+    <string name="Grant_necessary_permissions">Please go to app settings and grant necessary settings.</string>
+    <string name="Permissions_not_granted">Permission are not granted.</string>
+    <string name="NewScan">New Scan</string>
+</resources>
