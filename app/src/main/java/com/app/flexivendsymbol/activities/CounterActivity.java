@@ -1,5 +1,6 @@
 package com.app.flexivendsymbol.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,7 +24,7 @@ public class CounterActivity extends BaseActivity {
         findViewById(R.id.btnStartScan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(CounterActivity.this, ScanningActivity.class));
             }
         });
 

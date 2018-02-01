@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.annotation.Nullable;
 
-import com.app.flexivendsymbol.activities.MainActivity;
+import com.app.flexivendsymbol.activities.ScanningActivity;
 import com.app.flexivendsymbol.helpers.Helper;
 import com.app.flexivendsymbol.helpers.Recognizer;
 
@@ -34,7 +34,7 @@ public class RecognizerService extends IntentService {
             long num = recognizer.Recognize(pixelLine, false);
             if (num != -1) {
                 Intent broadcastIntent = new Intent();
-                broadcastIntent.setAction(MainActivity.ResponseReceiver.ACTION_PROCESSED);
+                broadcastIntent.setAction(ScanningActivity.ResponseReceiver.ACTION_PROCESSED);
                 broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
                 broadcastIntent.putExtra(KEY_RESULT, String.valueOf(num));
                 sendBroadcast(broadcastIntent);

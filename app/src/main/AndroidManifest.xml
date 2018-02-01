@@ -37,11 +37,11 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.ScanningActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activities.ChooseCupActivity"
+            android:name=".activities.SharingActivity"
             android:screenOrientation="portrait" />
 
         <service

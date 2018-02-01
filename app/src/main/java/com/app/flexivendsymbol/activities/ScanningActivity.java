@@ -32,7 +32,7 @@ import com.app.flexivendsymbol.services.RecognizerService;
 
 import java.io.ByteArrayOutputStream;
 
-public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, Camera.PreviewCallback {
+public class ScanningActivity extends AppCompatActivity implements SurfaceHolder.Callback, Camera.PreviewCallback {
 
     private static final int REQUEST_PERMISSION_CAMERA = 0x01;
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scanning);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == REQUEST_PERMISSION_CAMERA) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, ScanningActivity.class));
                 finish();
             } else {
                 tvResult.setText(R.string.Permissions_not_granted);
@@ -224,16 +224,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
         String code = tvResult.getText().toString();
 
-        /*
-        int cupSize = Integer.parseInt(code.substring(code.length() - 1));
-        if (cupSize < 1 || cupSize > 4) {
-            Toast.makeText(this, "Invalid Number. Scan again!", Toast.LENGTH_SHORT).show();
-            tvResult.setText(null);
-            return;
-        }*/
-
-        Intent intent = new Intent(this, ChooseCupActivity.class);
-        intent.putExtra(ChooseCupActivity.KEY_SYMBOL_CODE, code);
+        Intent intent = new Intent(this, SharingActivity.class);
+        intent.putExtra(SharingActivity.KEY_SYMBOL_CODE, code);
         startActivity(intent);
         finish();
     }
