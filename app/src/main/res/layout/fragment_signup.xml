@@ -20,14 +20,30 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnLogin"
+        <EditText
+            android:id="@+id/etEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:background="@drawable/dr_selector_border_white"
-            android:text="@string/login"
-            android:textAllCaps="false"
+            android:background="@drawable/dr_bg_round_border_white"
+            android:gravity="center"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
             android:textColor="@color/white"
+            android:textColorHint="@color/lightGray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dr_bg_round_border_white"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGray"
             android:textSize="14sp" />
 
         <Button
@@ -35,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/dr_selector_border_white"
+            android:background="@drawable/dr_selector_bg_green"
             android:text="@string/signup"
             android:textAllCaps="false"
             android:textColor="@color/white"

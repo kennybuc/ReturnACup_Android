@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 import com.app.flexivendsymbol.R;
 import com.app.flexivendsymbol.fragments.base.BaseFragment;
 
-public class LoginFragment extends BaseFragment {
+public class SignupFragment extends BaseFragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        return inflater.inflate(R.layout.fragment_signup, container, false);
     }
 
     @Override
