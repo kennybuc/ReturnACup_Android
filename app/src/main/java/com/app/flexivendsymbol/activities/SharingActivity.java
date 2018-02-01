@@ -55,16 +55,19 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
         tvCode.setText(code);
 
         // Wrap event handlers to view elements.
+        findViewById(R.id.btnClose).setOnClickListener(this);
         findViewById(R.id.btnPrint).setOnClickListener(this);
         findViewById(R.id.btnSendToEmail).setOnClickListener(this);
 
         submitToken();
     }
 
-
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnPrint) {
+        if (v.getId() == R.id.btnClose) {
+            finish();
+            startActivity(new Intent(this, ThankyouActivity.class));
+        } else if (v.getId() == R.id.btnPrint) {
             printToken();
         } else if (v.getId() == R.id.btnSendToEmail) {
             sendToEmail();
