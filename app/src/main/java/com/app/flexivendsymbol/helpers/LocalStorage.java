@@ -52,7 +52,7 @@ public class LocalStorage {
      * @return Integer value for key.
      */
     public int getIntPreference(String key) {
-        return mSharedPreferences.getInt(key, -1);
+        return mSharedPreferences.getInt(key, 0);
     }
 
     /**

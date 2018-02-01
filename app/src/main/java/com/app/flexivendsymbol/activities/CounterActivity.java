@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.app.flexivendsymbol.R;
 import com.app.flexivendsymbol.activities.base.BaseActivity;
+import com.app.flexivendsymbol.helpers.AppUtils;
 
 public class CounterActivity extends BaseActivity {
 
@@ -27,12 +28,13 @@ public class CounterActivity extends BaseActivity {
                 startActivity(new Intent(CounterActivity.this, ScanningActivity.class));
             }
         });
-
-        setupPage();
     }
 
-    private void setupPage() {
-        tvCounterNumber.setText("10");
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        tvCounterNumber.setText(String.valueOf(AppUtils.getCounterNumber()));
     }
 
 }

@@ -5,13 +5,20 @@ import android.hardware.usb.UsbDevice;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.TextView;
 
 import com.app.flexivendsymbol.R;
 import com.app.flexivendsymbol.activities.base.BaseActivity;
+import com.app.flexivendsymbol.api.APIClient;
+import com.app.flexivendsymbol.helpers.AppUtils;
 import com.app.flexivendsymbol.helpers.UIUtils;
 import com.er.ERusbsdk.UsbController;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class SharingActivity extends BaseActivity implements View.OnClickListener {
 
@@ -50,6 +57,8 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
         // Wrap event handlers to view elements.
         findViewById(R.id.btnPrint).setOnClickListener(this);
         findViewById(R.id.btnSendToEmail).setOnClickListener(this);
+
+        submitToken();
     }
 
 
@@ -111,6 +120,23 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
             }
         }
         return false;
+    }
+
+    private void submitToken() {
+        String apiKey = getString(R.string.API_KEY);
+        APIClient.getAPIService().registerNumber(apiKey, code).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call,
+                                   @NonNull retrofit2.Response<ResponseBody> response) {
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
+        AppUtils.incrementCounterNumber();
     }
 
 }
