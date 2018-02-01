@@ -1,5 +1,6 @@
 package com.app.flexivendsymbol.activities;
 
+import android.content.Intent;
 import android.hardware.usb.UsbDevice;
 import android.os.Bundle;
 import android.os.Handler;
@@ -77,11 +78,17 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
             usbController.sendMsg(code, "GBK", usbDevice);
         } else {
             UIUtils.showMessage(this, R.string.printer_unavailable);
+            connectPrinter();
         }
     }
 
     private void sendToEmail() {
-
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setType("plain/text");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{""});
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Return-A-Cup Token");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, code);
+        startActivity(Intent.createChooser(emailIntent, "Send mail..."));
     }
 
     private void connectPrinter() {
