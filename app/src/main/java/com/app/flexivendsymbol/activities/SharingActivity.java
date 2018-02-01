@@ -63,6 +63,7 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void printToken() {
+        String token = getString(R.string.PRINT_STRING);
         if (checkUsbPermission()) {
             byte printStatus = usbController.revByte(usbDevice);
             if (printStatus == 0x38) {
@@ -75,7 +76,7 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
             cmd_resume[1] = 0x40; // reset command
             usbController.sendByte(cmd_resume, usbDevice);
             usbController.sendByte(new byte[]{0x1D, 0x21, 0x22}, usbDevice);
-            usbController.sendMsg(code, "GBK", usbDevice);
+            usbController.sendMsg(token, "GBK", usbDevice);
         } else {
             UIUtils.showMessage(this, R.string.printer_unavailable);
             connectPrinter();

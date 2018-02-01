@@ -18,6 +18,7 @@
     <string name="send_to_email">Send to email</string>
     <string name="paper_unavailable">Paper is unavailable</string>
     <string name="printer_unavailable">Printer is not connected</string>
+    <string name="PRINT_STRING">TOKEN\ncollect 10\n\n\n   </string>
 
     <string name="PlaceYourSymbol">Place your symbol within red rectangle.</string>
     <string name="Scanning">Scanning…</string>
