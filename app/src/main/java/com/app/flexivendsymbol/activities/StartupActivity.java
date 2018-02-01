@@ -14,7 +14,7 @@ public class StartupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         if (AppUser.getSavedUser() != null) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, CounterActivity.class));
         } else {
             startActivity(new Intent(this, OnboardingActivity.class));
         }

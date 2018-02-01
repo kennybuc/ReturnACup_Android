@@ -24,7 +24,7 @@
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:background="@drawable/dr_selector_border_white"
+            android:background="@drawable/dr_selector_bg_green"
             android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/white"

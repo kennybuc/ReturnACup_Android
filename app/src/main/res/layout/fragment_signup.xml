@@ -34,6 +34,20 @@
             android:textSize="14sp" />
 
         <EditText
+            android:id="@+id/etCompanyName"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/dr_bg_round_border_white"
+            android:gravity="center"
+            android:hint="@string/company_name"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGray"
+            android:textSize="14sp" />
+
+        <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="36dp"
