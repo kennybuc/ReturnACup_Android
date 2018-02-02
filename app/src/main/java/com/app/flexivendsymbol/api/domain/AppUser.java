@@ -27,4 +27,8 @@ public class AppUser {
         }
         return null;
     }
+
+    public static void logoutUser() {
+        LocalStorage.getInstance().put(KEY_USER, null);
+    }
 }

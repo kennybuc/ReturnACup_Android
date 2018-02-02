@@ -85,6 +85,7 @@ public class CounterActivity extends BaseActivity {
     }
 
     private void performLogout() {
+        AppUser.logoutUser();
         startActivity(new Intent(this, OnboardingActivity.class));
         finish();
     }
