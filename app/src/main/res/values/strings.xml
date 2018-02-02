@@ -20,9 +20,9 @@
     <string name="printer_unavailable">Printer is not connected</string>
     <string name="PRINT_STRING">TOKEN\ncollect 10\n\n\n   </string>
     <string name="thankyou_page_header">Thank you for returning your cup!\n
-        Please user your tokens at the store counter</string>
-    <string name="thankyou_page_footer">All cups in the Return-A-Cup programme are sent
-        to the approved cup recycling facilities.</string>
+        Please use your tokens at the store counter</string>
+    <string name="thankyou_page_footer">All cups in the Return-A-Cup programme\n
+        are sent to the approved cup recycling facilities.</string>
 
     <string name="PlaceYourSymbol">Place your symbol within red rectangle.</string>
     <string name="Scanning">Scanning…</string>
