@@ -55,7 +55,6 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
         tvCode.setText(code);
 
         // Wrap event handlers to view elements.
-        findViewById(R.id.btnClose).setOnClickListener(this);
         findViewById(R.id.btnPrint).setOnClickListener(this);
         findViewById(R.id.btnSendToEmail).setOnClickListener(this);
 
@@ -64,10 +63,7 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnClose) {
-            finish();
-            startActivity(new Intent(this, ThankyouActivity.class));
-        } else if (v.getId() == R.id.btnPrint) {
+        if (v.getId() == R.id.btnPrint) {
             printToken();
         } else if (v.getId() == R.id.btnSendToEmail) {
             sendToEmail();
@@ -89,6 +85,8 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
             usbController.sendByte(cmd_resume, usbDevice);
             usbController.sendByte(new byte[]{0x1D, 0x21, 0x22}, usbDevice);
             usbController.sendMsg(token, "GBK", usbDevice);
+
+            closeAndShowThankYou();
         } else {
             UIUtils.showMessage(this, R.string.printer_unavailable);
             connectPrinter();
@@ -140,6 +138,11 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
         });
 
         AppUtils.incrementCounterNumber();
+    }
+
+    private void closeAndShowThankYou() {
+        startActivity(new Intent(this, ThankyouActivity.class));
+        finish();
     }
 
 }

@@ -19,6 +19,7 @@
     <string name="paper_unavailable">Paper is unavailable</string>
     <string name="printer_unavailable">Printer is not connected</string>
     <string name="PRINT_STRING">TOKEN\ncollect 10\n\n\n   </string>
+    <string name="sharing_page_header">Scan Successful\n\nHow Would you Like Your Token</string>
     <string name="thankyou_page_header">Thank you for returning your cup!\n
         Please use your tokens at the store counter</string>
     <string name="thankyou_page_footer">All cups in the Return-A-Cup programme\n
