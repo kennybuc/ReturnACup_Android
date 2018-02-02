@@ -79,6 +79,7 @@ public class SignupFragment extends BaseFragment {
 
         // Navigate to the counter page after success login.
         startActivity(new Intent(baseActivity, CounterActivity.class));
+        baseActivity.finish();
     }
 
 }

@@ -24,6 +24,7 @@
         Please use your tokens at the store counter</string>
     <string name="thankyou_page_footer">All cups in the Return-A-Cup programme\n
         are sent to the approved cup recycling facilities.</string>
+    <string name="logout">Logout</string>
 
     <string name="PlaceYourSymbol">Place your symbol within red rectangle.</string>
     <string name="Scanning">Scanning…</string>
