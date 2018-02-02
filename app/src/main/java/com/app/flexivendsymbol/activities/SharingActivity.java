@@ -51,8 +51,6 @@ public class SharingActivity extends BaseActivity implements View.OnClickListene
         connectPrinter();
 
         code = getIntent().getStringExtra(KEY_SYMBOL_CODE);
-        TextView tvCode = findViewById(R.id.tvCode);
-        tvCode.setText(code);
 
         // Wrap event handlers to view elements.
         findViewById(R.id.btnPrint).setOnClickListener(this);
