@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
-        android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingEnd="40dp"
         android:paddingStart="40dp">
@@ -17,6 +16,7 @@
             android:id="@+id/etEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="36dp"
+            android:layout_marginTop="160dp"
             android:background="@drawable/dr_bg_round_border_white"
             android:focusable="false"
             android:focusableInTouchMode="false"

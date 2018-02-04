@@ -3,58 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="40dp">
 
-    <ImageView
+    <EditText
+        android:id="@+id/etEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginTop="60dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/img_logo" />
+        android:background="@drawable/dr_bg_round_border_white"
+        android:gravity="center"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGray"
+        android:textSize="14sp" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dr_bg_round_border_white"
+        android:gravity="center"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGray"
+        android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/etEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:background="@drawable/dr_bg_round_border_white"
-            android:gravity="center"
-            android:hint="@string/email_address"
-            android:inputType="textEmailAddress"
-            android:padding="8dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightGray"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/dr_bg_round_border_white"
-            android:gravity="center"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightGray"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/dr_selector_bg_green"
-            android:text="@string/login"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/dr_selector_bg_green"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 </LinearLayout>
